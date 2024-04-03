@@ -1,0 +1,167 @@
+/* APP LAYOUT CSS */
+
+html, body {
+    height: 100%;
+    margin: 0;
+    font-family: League Spartan;
+    src: url(https://fonts.googleapis.com/css2?family=Basic&family=League+Spartan:wght@100..900&display=swap);
+}
+
+.btn-banner {
+    font-family: 'League Spartan', sans-serif;
+    font-size: 19px;
+    font-weight: 700;
+}
+
+body.d-flex {
+    display: flex;
+    flex-direction: column;
+}
+
+.mt-auto {
+    margin-top: auto;
+}
+
+.card-image{
+    transition: transform 0.3s;
+}
+
+.card-image:hover {
+    transform: scale(1.05);
+}
+
+.bg-secondary {
+    background-color: #2c3e50 !important;
+}
+
+.copyright {
+    background-color: #1a252f;
+}
+
+nav{
+    font-weight: 700;
+}
+
+.navbar .navbar-brand .brand-logo {
+    height: 50px;
+    width: auto;
+}
+
+@media (max-width: 768px) {
+    .navbar .navbar-brand .brand-logo {
+        height: 50px;
+    }
+}
+
+
+
+
+
+/* MOVIES INDEX CSS */
+
+.filter-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+}
+
+.filter-section {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 1.5rem;
+}
+
+.filter-section form {
+    width: 100%;
+}
+
+.btn-primary-outline{
+    color: #6f42c1;
+    border-color: #6f42c1;
+}
+
+.btn-primary-outline:hover {
+    color: #fff;
+    background-color: #6f42c1;
+    border-color: #6f42c1;
+}
+
+.movie-img-card{
+    height: 18vw;
+    object-fit: cover;
+}
+
+.col .input-group-text{
+    outline: none;
+    box-shadow: none;
+}
+
+/* MOVIES SHOW CSS */
+
+.row .quantity-input{
+    outline: none;
+    box-shadow: none;
+}
+
+
+
+
+
+/* NEWS INDEX CSS */
+
+.news-container .card {
+    transition: transform 0.2s;
+}
+
+.news-container .card:hover {
+    transform: scale(1.05);
+}
+
+.news-container .card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+
+.news-container .card-title {
+    height: 3rem;
+    overflow: hidden;
+}
+
+.news-container .card-text {
+    height: 4rem;
+    overflow: hidden;
+}
+
+.news-container .stretched-link::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+}
+
+/* NEWS SHOW CSS */
+
+.news-detail img {
+    width: 100%;
+    height: auto;
+}
+
+.news-detail header h1 {
+    font-size: 2.5rem;
+}
+
+.news-detail .badge {
+    font-size: 0.875rem;
+    padding: 0.5em 0.75em;
+}
+
+.news-detail section p {
+    white-space: pre-line;
+}
+
+.no-pointer {
+    cursor: default;
+}
