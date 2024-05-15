@@ -13,16 +13,16 @@ class NewsController extends Controller
         $viewData = [];
         $viewData['title'] = 'News - PopMovies';
         $viewData['subtitle'] = 'List of News';
-        $viewData['news'] = News::all();
-
-        $orderDate = $request->input('order', 'desc');
-        if ($orderDate) {
-            $viewData['news'] = News::orderBy('created_at', in_array($orderDate, ['asc', 'desc']) ? $orderDate : 'desc')->get();
-        }
-
+        
+        $orderDate = $request->input('order');
         $orderTitle = $request->input('alphabetical');
-        if ($orderTitle) {
-            $viewData['news'] = News::orderBy('title', in_array($orderTitle, ['asc', 'desc']) ? $orderTitle : 'desc')->get();
+
+        if ($orderDate && in_array($orderDate, ['asc', 'desc'])) {
+            $viewData['news'] = News::orderBy('created_at', $orderDate)->get();
+        } elseif ($orderTitle && in_array($orderTitle, ['asc', 'desc'])) {
+            $viewData['news'] = News::orderBy('title', $orderTitle)->get();
+        } else {
+            $viewData['news'] = News::all();
         }
 
         return view('news.index')->with('viewData', $viewData);
