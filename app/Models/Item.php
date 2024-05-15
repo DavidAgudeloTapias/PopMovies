@@ -83,19 +83,9 @@ class Item extends Model
         return $this->attributes['created_at'];
     }
 
-    public function setCreatedAt($createdAt) : void
-    {
-        $this->attributes['created_at'] = $createdAt;
-    }
-
     public function getUpdatedAt() : string
     {
         return $this->attributes['updated_at'];
-    }
-
-    public function setUpdatedAt($updatedAt) : void
-    {
-        $this->attributes['updated_at'] = $updatedAt;
     }
 
     public function order() : BelongsTo

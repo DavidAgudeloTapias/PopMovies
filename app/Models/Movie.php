@@ -56,47 +56,47 @@ class Movie extends Model
     {
         return $this->attributes['title'];
     }
-    
+
     public function setTitle(string $title) : void
     {
         $this->attributes['title'] = $title;
     }
-    
+
     public function getDirector() : string
     {
         return $this->attributes['director'];
     }
-    
+
     public function setDirector(string $director) : void
     {
         $this->attributes['director'] = $director;
     }
-    
+
     public function getGenre() : string
     {
         return $this->attributes['genre'];
     }
-    
+
     public function setGenre(string $genre) : void
     {
         $this->attributes['genre'] = $genre;
     }
-    
+
     public function getPrice() : int
     {
         return $this->attributes['price'];
     }
-    
+
     public function setPrice(int $price) : void
     {
         $this->attributes['price'] = $price;
     }
-    
+
     public function getStock() : int
     {
         return $this->attributes['stock'];
     }
-    
+
     public function setStock(int $stock) : void
     {
         $this->attributes['stock'] = $stock;
@@ -106,7 +106,7 @@ class Movie extends Model
     {
         return $this->attributes['poster'];
     }
-    
+
     public function setPoster(string $poster) : void
     {
         $this->attributes['poster'] = $poster;
@@ -126,7 +126,7 @@ class Movie extends Model
     {
         return $this->attributes['rating'];
     }
-    
+
     public function setRating(float $rating) : void
     {
         $this->attributes['rating'] = $rating;
@@ -137,31 +137,21 @@ class Movie extends Model
         return $this->attributes['created_at'];
     }
 
-    public function setCreatedAt($createdAt) : void
-    {
-        $this->attributes['created_at'] = $createdAt;
-    }
-    
     public function getUpdatedAt() : string
     {
         return $this->attributes['updated_at'];
-    }
-    
-    public function setUpdatedAt($updatedAt) : void
-    {
-        $this->attributes['updated_at'] = $updatedAt;
     }
 
     public function items() : HasMany
     {
         return $this->hasMany(Item::class);
     }
-    
+
     public function getItems() : Collection
     {
         return $this->items;
     }
-    
+
     public function setItems(Collection $items) : void
     {
         $this->items = $items;
@@ -171,12 +161,12 @@ class Movie extends Model
     {
         return $this->hasMany(Review::class);
     }
-    
+
     public function getReviews() : Collection
     {
         return $this->reviews;
     }
-    
+
     public function setReviews(Collection $reviews) : void
     {
         $this->reviews = $reviews;

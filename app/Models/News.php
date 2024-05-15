@@ -72,7 +72,7 @@ class News extends Model
     {
         return $this->attributes['image'];
     }
-    
+
     public function setImage(string $image) : void
     {
         $this->attributes['image'] = $image;
@@ -83,18 +83,8 @@ class News extends Model
         return $this->attributes['created_at'];
     }
 
-    public function setCreatedAt($createdAt) : void
-    {
-        $this->attributes['created_at'] = $createdAt;
-    }
-    
     public function getUpdatedAt() : string
     {
         return $this->attributes['updated_at'];
-    }
-    
-    public function setUpdatedAt($updatedAt) : void
-    {
-        $this->attributes['updated_at'] = $updatedAt;
     }
 }
