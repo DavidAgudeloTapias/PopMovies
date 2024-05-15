@@ -2,7 +2,6 @@
 
 namespace App\Models;
 
-// use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
@@ -64,22 +63,22 @@ class User extends Authenticatable
     {
         return $this->attributes['id'];
     }
-    
+
     public function setId(int $id) : void
     {
         $this->attributes['id'] = $id;
     }
-    
+
     public function getName() : string
     {
         return $this->attributes['name'];
     }
-    
+
     public function setName(string $name) : void
     {
         $this->attributes['name'] = $name;
     }
-    
+
     public function getEmail() : string
     {
         return $this->attributes['email'];
@@ -89,32 +88,32 @@ class User extends Authenticatable
     {
         $this->attributes['email'] = $email;
     }
-    
+
     public function getPassword() : string
     {
         return $this->attributes['password'];
     }
-    
+
     public function setPassword(string $password) : void
     {
         $this->attributes['password'] = $password;
     }
-    
+
     public function getRole() : string
     {
         return $this->attributes['role'];
     }
-    
+
     public function setRole(string $role) : void
     {
         $this->attributes['role'] = $role;
     }
-    
+
     public function getBalance() : int
     {
         return $this->attributes['balance'];
     }
-    
+
     public function setBalance(int $balance) : void
     {
         $this->attributes['balance'] = $balance;
@@ -124,17 +123,17 @@ class User extends Authenticatable
     {
         return $this->attributes['created_at'];
     }
-    
+
     public function setCreatedAt($createdAt) : void
     {
         $this->attributes['created_at'] = $createdAt;
     }
-    
+
     public function getUpdatedAt() : string
     {
         return $this->attributes['updated_at'];
     }
-    
+
     public function setUpdatedAt($updatedAt) : void
     {
         $this->attributes['updated_at'] = $updatedAt;

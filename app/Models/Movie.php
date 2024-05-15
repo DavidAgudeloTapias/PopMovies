@@ -52,7 +52,7 @@ class Movie extends Model
         return $this->attributes['id'];
     }
 
-    public function getTitle()
+    public function getTitle() : string
     {
         return $this->attributes['title'];
     }
@@ -87,7 +87,7 @@ class Movie extends Model
         return $this->attributes['price'];
     }
     
-    public function setPrice(int $price)
+    public function setPrice(int $price) : void
     {
         $this->attributes['price'] = $price;
     }

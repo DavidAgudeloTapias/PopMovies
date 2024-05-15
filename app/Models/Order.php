@@ -29,7 +29,7 @@ class Order extends Model
             "user_id" => "required|exists:users,id",
         ]);
     }
-    
+
     public function getId() : int
     {
         return $this->attributes['id'];
@@ -39,18 +39,22 @@ class Order extends Model
     {
         return $this->attributes['total'];
     }
+
     public function setTotal(int $total) : void
     {
         $this->attributes['total'] = $total;
     }
+
     public function getUserId() : int
     {
         return $this->attributes['user_id'];
     }
+
     public function setUserId(int $userId) : void
     {
         $this->attributes['user_id'] = $userId;
     }
+
     public function getCreatedAt() : string
     {
         return $this->attributes['created_at'];

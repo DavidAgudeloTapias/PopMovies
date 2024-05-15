@@ -3,11 +3,12 @@
 namespace App\Http\Controllers;
 
 use App\Models\Order;
+use Illuminate\View\View;
 use Illuminate\Support\Facades\Auth;
 
 class MyAccountController extends Controller
 {
-    public function orders()
+    public function orders() : View
     {
         $viewData = [];
         $viewData["title"] = "My Orders - PopMovies";
