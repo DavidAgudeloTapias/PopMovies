@@ -15,16 +15,13 @@ class MovieController extends Controller
         $viewData["subtitle"] = "Available movies";
 
         $searchTerm = $request->input('search');
+        $rating = $request->input('rating');
+
         if ($searchTerm) {
             $viewData["movies"] = Movie::where('title', 'LIKE', '%' . $searchTerm . '%')->get();
-        } else {
-            $viewData["movies"] = Movie::all();
-        }
-
-        $rating = $request->input('rating');
-        if ($rating) {
+        } elseif ($rating) {
             $viewData["movies"] = Movie::where('rating', '>=', $rating)->get();
-        } else {
+        } else{
             $viewData["movies"] = Movie::all();
         }
 
