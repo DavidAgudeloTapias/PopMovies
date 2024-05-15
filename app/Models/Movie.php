@@ -19,9 +19,12 @@ class Movie extends Model
      * $this->attributes['price'] - int - contains the movie price
      * $this->attributes['stock'] - int - contains the movie stock
      * $this->attributes['poster'] - string - contains the movie poster
+     * $this->attributes['plot'] - string - contains the movie plot
+     * $this->attributes['rating'] - string - contains the movie rating
      * $this->attributes['created_at'] - timestamp - contains the movie creation date
      * $this->attributes['updated_at'] - timestamp - contains the movie update date
      * $this->items - Item[] - contains the associated items
+     * $this->reviews - Review[] - contains the associated reviews
     */
 
     public static function validate(Request $request) : void

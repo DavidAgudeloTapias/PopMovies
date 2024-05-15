@@ -16,6 +16,9 @@ class News extends Model
      * $this->attributes['title'] - string - contains the news title
      * $this->attributes['content'] - string - contains the news content
      * $this->attributes['source'] - string - contains the news source
+     * $this->attributes['image'] - string - contains the news image
+     * $this->attributes['created_at'] - timestamp - contains the movie creation date
+     * $this->attributes['updated_at'] - timestamp - contains the movie update date
      */
 
     public static function validate(Request $request) : void
