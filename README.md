@@ -15,7 +15,7 @@ PopMovies es un e-commerce innovador enfocado en la venta de películas físicas
 3. Ejecutar migraciones: `php artisan migrate`
 
 ## Ejecución del Proyecto
-1. Clonar el repositorio: `git clone https://github.com/DavidAgudeloTapias/PopMovies`
+1. Clonar el repositorio: `git clone https://github.com/DavidAgudeloTapias/PopMovies.git`
 2. Ubicarse en la linea de comandos, sobre la carpeta donde se clonó el repositorio
 3. Ejecutar el comando `php artisan serve`
 4. En el navegador pegar  este link: `http://127.0.0.1:8000`
