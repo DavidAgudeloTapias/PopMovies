@@ -18,7 +18,7 @@ class NewsController extends Controller
         $orderDate = $request->input('order', 'desc');
         if ($orderDate) {
             $viewData['news'] = News::orderBy('created_at', in_array($orderDate, ['asc', 'desc']) ? $orderDate : 'desc')->get();
-        } 
+        }
 
         $orderTitle = $request->input('alphabetical');
         if ($orderTitle) {

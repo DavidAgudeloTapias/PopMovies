@@ -12,10 +12,10 @@ class ReviewController extends Controller
     public function store(Request $request) : RedirectResponse
     {
         $review = new Review();
-        $review->movie_id = $request->movie_id;
-        $review->user_id = auth()->user()->id;
-        $review->comment = $request->comment;
-        $review->rating = $request->rating;
+        $review->setMovieId($request->input('movie_id'));
+        $review->setUserId(auth()->user()->id);
+        $review->setComment($request->input('comment'));
+        $review->setRating($request->input('rating'));
         $review->save();
 
         $movie = Movie::find($request->movie_id);

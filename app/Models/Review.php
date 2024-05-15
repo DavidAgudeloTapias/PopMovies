@@ -70,12 +70,12 @@ class Review extends Model
 
     public function getUserId() : int
     {
-        return $this->attributes['order_id'];
+        return $this->attributes['user_id'];
     }
 
     public function setUserId(int $userId) : void
     {
-        $this->attributes['order_id'] = $userId;
+        $this->attributes['user_id'] = $userId;
     }
 
     public function getCreatedAt() : string

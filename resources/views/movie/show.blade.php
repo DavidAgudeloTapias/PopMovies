@@ -5,33 +5,33 @@
 <div class="card mb-3">
     <div class="row g-0">
         <div class="col-md-4">
-            <img src="{{ asset('/storage/'.$viewData["movie"]->getPoster()) }}" class="img-fluid rounded-start"> 
+            <img src="{{ asset('/storage/'.$viewData["movie"]->getPoster()) }}" class="img-fluid rounded-start" alt="">
         </div>
         <div class="col-md-8">
             <div class="card-body">
                 <h5 class="card-title">
-                    {{ $viewData["movie"]->getTitle() }} (${{ $viewData["movie"]->getPrice() }}) 
+                    {{ $viewData["movie"]->getTitle() }} (${{ $viewData["movie"]->getPrice() }})
                 </h5>
                 <p class="card-text">{{ $viewData["movie"]->getGenre() }}</p>
                 <p class="card-text"><b>Plot:</b> {{ $viewData["movie"]->getPlot() }}</p>
                 <p class="card-text"><b>Rating:</b> {{ $viewData["movie"]->getRating() }}</p>
                 <p class="card-text"><b>Available stock:</b> {{ $viewData["movie"]->getStock() }}</p>
                 @auth
-                    <p class="card-text"> 
-                        <form method="POST" action="{{ route('cart.add', ['id'=> $viewData['movie']->getId()]) }}"> 
-                            <div class="row"> 
-                                @csrf 
-                                <div class="col-auto"> 
-                                    <div class="input-group col-auto"> 
-                                        <div class="input-group-text">Quantity</div> 
-                                        <input type="number" min="1" max="10" class="form-control quantity-input" name="quantity" value="1"> 
-                                    </div> 
-                                </div> 
-                                <div class="col-auto"> 
-                                    <button class="mt-auto btn btn-primary-outline" type="submit">Add to cart</button> 
-                                </div> 
-                            </div> 
-                        </form> 
+                    <p class="card-text">
+                        <form method="POST" action="{{ route('cart.add', ['id'=> $viewData['movie']->getId()]) }}">
+                            <div class="row">
+                                @csrf
+                                <div class="col-auto">
+                                    <div class="input-group col-auto">
+                                        <div class="input-group-text">Quantity</div>
+                                        <input type="number" min="1" max="10" class="form-control quantity-input" name="quantity" value="1">
+                                    </div>
+                                </div>
+                                <div class="col-auto">
+                                    <button class="mt-auto btn btn-primary-outline" type="submit">Add to cart</button>
+                                </div>
+                            </div>
+                        </form>
                         <div class="row">
                             <div class="col mt-4">
                                 <form class="py-2 px-4" action="{{route('review.store')}}" style="box-shadow: 0 0 10px 0 #ddd;" method="POST" autocomplete="off">
