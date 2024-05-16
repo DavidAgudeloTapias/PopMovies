@@ -18,6 +18,7 @@ Route::get('/', 'App\Http\Controllers\HomeController@index')->name("home.index")
 
 Route::get('/movies', 'App\Http\Controllers\MovieController@index')->name("movie.index");
 Route::get('/movies/{id}', 'App\Http\Controllers\MovieController@show')->name("movie.show");
+Route::get('/locale/{lange}', 'App\Http\Controllers\LangController@setLang')->name("lang.setLang");
 
 Route::middleware('client')->group(function () {
     Route::post('/movies/reviews', 'App\Http\Controllers\ReviewController@store')->name("review.store");
