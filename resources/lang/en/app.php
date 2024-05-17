@@ -43,6 +43,7 @@ return [
         "subtitle" => "Welcome to PopMovies",
     ],
     "cart_view" => [
+        "view_title" => "Products in Cart",
         "id" => "ID",
         "name" => "Name",
         "price" => "Price",

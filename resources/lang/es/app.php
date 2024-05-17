@@ -43,6 +43,7 @@ return [
         "subtitle" => "Bienvenido a PopMovies",
     ],
     "cart_view" => [
+        "view_title" => "Productos en el Carrito",
         "id" => "Identificación",
         "name" => "Nombre",
         "price" => "Precio",

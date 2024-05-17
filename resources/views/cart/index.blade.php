@@ -4,7 +4,7 @@
 @section('content')
 <div class="card">
     <div class="card-header">
-        Products in Cart
+    @lang("app.cart_view.view_title")
     </div>
     <div class="card-body">
         @if(session('error'))
