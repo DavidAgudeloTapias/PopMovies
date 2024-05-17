@@ -94,7 +94,7 @@
                 <p>{{ $review->getComment() }}</p>
             </div>
         @empty
-            <p>@lang("app.movie_view.noreviews")</p>
+            <p>@lang("app.movie_view.no_reviews")</p>
         @endforelse
     </div>
 </div>
