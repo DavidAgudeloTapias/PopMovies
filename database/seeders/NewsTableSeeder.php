@@ -39,7 +39,7 @@ class NewsTableSeeder extends Seeder
                             a major conversation with Nolan himself – plus his producing partner and wife Emma Thomas – conducted this April, looking back on the masterworks 
                             they’ve made together, and an exclusive tribute written by Denis Villeneuve.",
                 'source' => 'https://www.empireonline.com/movies/news',
-                'image' => 'img/news/3.png',
+                'image' => 'img/news/2.png',
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
