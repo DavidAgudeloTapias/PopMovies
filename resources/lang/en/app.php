@@ -83,4 +83,20 @@ return [
         "reviews" => "Reviews",
         "no_reviews" => "No reviews yet.",
     ],
+    "orders_view" => [
+        "item" => "Item ID",
+        "name" => "Product Name",
+        "price" => "price by unit",
+        "quantity" => "Quantity",
+        "message" => "Seems to be that you have not purchased anything in our store =(.",
+    ],
+    "news_view" => [
+        "filter" => "Filters",
+        "date" => "Order by date",
+        "recent" => "Most recent first",
+        "oldest" => "Oldest first",
+        "order" => "Order alphabetically",
+        "read" => "Read More",
+        "posted" => "Posted on ",
+    ],
 ];

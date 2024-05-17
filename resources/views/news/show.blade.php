@@ -11,7 +11,7 @@
                 <!-- News Header -->
                 <header class="mb-4">
                     <h1 class="fw-bolder mb-1">{{ $viewData["news"]->getTitle() }}</h1>
-                    <div class="text-muted fst-italic mb-2">Posted on {{ $viewData["news"]->getCreatedAt() }}</div>
+                    <div class="text-muted fst-italic mb-2">@lang("app.news_view.posted") {{ $viewData["news"]->getCreatedAt() }}</div>
                     <a class="badge bg-secondary text-decoration-none link-light">Cinema</a>
                 </header>
                 

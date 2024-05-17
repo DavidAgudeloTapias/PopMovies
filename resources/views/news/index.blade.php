@@ -6,7 +6,7 @@
 @section('content')
 <div class="row mb-3">
     <div class="col">
-        <h2 class="filter-title">Filter</h2>
+        <h2 class="filter-title">@lang("app.news_view.filter")</h2>
     </div>
 </div>
 <div class="row mb-3">
@@ -15,16 +15,16 @@
             <form action="{{ route('news.index') }}" method="GET">
                 <div class="input-group">
                     <select class="form-control select-filter" name="order" onchange="this.form.submit()">
-                        <option value="">Order by date</option>
-                        <option value="desc">Most recent first</option>
-                        <option value="asc">Oldest first</option>
+                        <option value="">@lang("app.news_view.date")</option>
+                        <option value="desc">@lang("app.news_view.recent")</option>
+                        <option value="asc">@lang("app.news_view.oldest")</option>
                     </select>
                 </div>
             </form>
             <form action="{{ route('news.index') }}" method="GET">
                 <div class="input-group">
                     <select class="form-control" name="alphabetical" onchange="this.form.submit()">
-                        <option value="">Order alphabetically</option>
+                        <option value="">@lang("app.news_view.order")</option>
                         <option value="asc">A - Z</option>
                         <option value="desc">Z - A</option>
                     </select>
@@ -42,7 +42,7 @@
                     <div class="card-body d-flex flex-column">
                         <h5 class="card-title">{{ $news->getTitle() }}</h5>
                         <p class="card-text text-truncate">{{ $news->getContent() }}</p>
-                        <a href="{{ route('news.show', ['id'=> $news->getId()]) }}" class="mt-auto btn btn-primary-outline">Read More</a>
+                        <a href="{{ route('news.show', ['id'=> $news->getId()]) }}" class="mt-auto btn btn-primary-outline">@lang("app.news_view.read")</a>
                     </div>
                 </div>
             </div>

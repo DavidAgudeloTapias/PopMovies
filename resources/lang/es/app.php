@@ -83,4 +83,20 @@ return [
         "reviews" => "Reseñas",
         "no_reviews" => "No hay reseñas todavía.",
     ],
+    "orders_view" => [
+        "item" => "ID del Ítem",
+        "name" => "Nombre del Producto",
+        "price" => "precio por unidad",
+        "quantity" => "Cantidad",
+        "message" => "Parece ser que no has comprado nada en nuestra tienda =(.",
+    ],
+    "news_view" => [
+        "filter" => "Filtros",
+        "date" => "Ordenar por fecha",
+        "recent" => "Más recientes primero",
+        "oldest" => "Más viejos primero",
+        "order" => "Ordenar alfabéticamente",
+        "read" => "Leer Más",
+        "posted" => "Posteado el ",
+    ],
 ];
