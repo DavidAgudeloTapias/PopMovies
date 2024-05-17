@@ -62,8 +62,10 @@ return [
         cinema and its audience.",
     ],
     "movie_view" => [
+        "filters" => "Filters",
+        "search_title" => "Search by title",
         "search" => "Search",
-        "minimumrating" => "Minimum rating:",
+        "minimum_rating" => "Minimum rating:",
         "plot" => "Plot:",
         "rating" => "Rating:",
         "stock" => "Available stock:",
@@ -75,10 +77,9 @@ return [
         "3" => "3 stars",
         "2" => "2 stars",
         "1" => "1 star",
+        "comment" => "Comment",
         "submit" => "Submit",
         "reviews" => "Reviews",
-        "noreviews" => "No reviews yet.",
-
+        "no_reviews" => "No reviews yet.",
     ],
 ];
-

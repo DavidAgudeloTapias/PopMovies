@@ -62,8 +62,10 @@ return [
         cine y su audiencia.",
     ],
     "movie_view" => [
+        "filters" => "Filtros",
+        "search_title" => "Buscar por título",
         "search" => "Buscar",
-        "minimumrating" => "Calificación mínima:",
+        "minimum_rating" => "Calificación mínima:",
         "plot" => "Trama:",
         "rating" => "Calificación:",
         "stock" => "Unidades disponibles:",
@@ -75,9 +77,9 @@ return [
         "3" => "3 estrellas",
         "2" => "2 estrellas",
         "1" => "1 estrella",
+        "comment" => "Comentario",
         "submit" => "Enviar",
         "reviews" => "Reseñas",
-        "noreviews" => "No hay reseñas todavía.",
+        "no_reviews" => "No hay reseñas todavía.",
     ],
 ];
-

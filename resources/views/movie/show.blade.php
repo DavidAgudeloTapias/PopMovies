@@ -56,7 +56,7 @@
                                     </div>
                                     <div class="form-group row mt-4">
                                         <div class="col">
-                                            <textarea class="form-control" name="comment" rows="6 " placeholder="Comment"></textarea>
+                                            <textarea class="form-control" name="comment" rows="6 " placeholder="@lang("app.movie_view.comment")"></textarea>
                                         </div>
                                     </div>
                                     <div class="mt-3 text-right">
