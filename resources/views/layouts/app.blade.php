@@ -94,7 +94,7 @@
     </nav>
     <header class="masthead text-white text-center py-4" style="background-color: #5f5d8b;">
         <div class="container d-flex align-items-center flex-column">
-            <h2>@yield('subtitle', @lang("app.app_layout.subtitle"))</h2>
+            <h2>@yield('subtitle', trans("app.app_layout.subtitle"))</h2>
         </div>
     </header>
 

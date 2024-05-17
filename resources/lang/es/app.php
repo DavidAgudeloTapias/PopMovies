@@ -41,7 +41,43 @@ return [
         "orders" => "Mis Ordenes",
         "logout" => "Cerrar Sesión",
         "subtitle" => "Bienvenido a PopMovies",
-
-    ]
+    ],
+    "cart_view" => [
+        "id" => "Identificación",
+        "name" => "Nombre",
+        "price" => "Precio",
+        "quantity" => "Cantidad",
+        "total" => "Total a pagar: ",
+        "remove" => "Borrar todas las películas del carrito",
+        "purchase" => "Compra",   
+        "complete" => "Compra Completada",
+        "congrats" => "Felicitaciones, compra completada. Su número de orden es ",
+    ],
+    "home_view" => [
+        "message" => "PopMovies es un e-commerce innovador enfocado en la venta de películas físicas, creado especialmente 
+        para amantes del cine, coleccionistas, y quienes valoran la experiencia de una película en formato tangible. 
+        Nuestra misión es construir una comunidad apasionada por el cine, ofreciendo un catálogo amplio y diverso y 
+        secciones informativas sobre el mundo cinematográfico. PopMovies se dedica a proporcionar una experiencia única y 
+        completa, desde la búsqueda de una película favorita hasta su entrega física, creando un vínculo especial entre el 
+        cine y su audiencia.",
+    ],
+    "movie_view" => [
+        "search" => "Buscar",
+        "minimumrating" => "Calificación mínima:",
+        "plot" => "Trama:",
+        "rating" => "Calificación:",
+        "stock" => "Unidades disponibles:",
+        "add" => "Añadir al carrito",
+        "review" => "Añadir una reseña sobre esta película",
+        "quantity" => "Cantidad",
+        "5" => "5 estrellas",
+        "4" => "4 estrellas",
+        "3" => "3 estrellas",
+        "2" => "2 estrellas",
+        "1" => "1 estrella",
+        "submit" => "Enviar",
+        "reviews" => "Reseñas",
+        "noreviews" => "No hay reseñas todavía.",
+    ],
 ];
 

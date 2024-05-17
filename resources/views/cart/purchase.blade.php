@@ -4,10 +4,10 @@
 @section('content')
 <div class="card">
     <div class="card-header">
-        Purchase Completed
+    @lang("app.cart_view.complete")
     </div>
     <div class="card-body">
-        <div class="alert alert-success" role="alert"> Congratulations, purchase completed. Order number is <b>#{{ $viewData["order"]->getId() }}</b> </div>
+        <div class="alert alert-success" role="alert">@lang("app.cart_view.congrats")<b>#{{ $viewData["order"]->getId() }}</b> </div>
     </div>
 </div>
 @endsection

@@ -13,14 +13,14 @@
             <div class="filter-section">
                 <form action="{{ route('movie.index') }}" method="GET" class="d-flex">
                     <input type="text" class="form-control" name="search" placeholder="Search by title" autocomplete="off">
-                    <button class="btn btn-primary-outline" type="submit">Search</button>
+                    <button class="btn btn-primary-outline" type="submit">@lang("app.movie_view.search")</button>
                 </form>
                 <form action="{{ route('movie.index') }}" method="GET">
                     <div class="d-flex align-items-center">
-                        <label for="rating-filter" class="me-2">Minimum rating:</label>
+                        <label for="rating-filter" class="me-2">@lang("app.movie_view.minimumrating")</label>
                         <input type="range" class="form-range me-2" name="rating" min="1" max="5" step="1" id="rating-filter">
                         <span id="rating-value" class="me-2">3</span>
-                        <button class="btn btn-primary-outline" type="submit">Search</button>
+                        <button class="btn btn-primary-outline" type="submit">@lang("app.movie_view.search")</button>
                     </div>
                 </form>
             </div>

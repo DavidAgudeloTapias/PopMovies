@@ -13,9 +13,9 @@
                     {{ $viewData["movie"]->getTitle() }} (${{ $viewData["movie"]->getPrice() }})
                 </h5>
                 <p class="card-text">{{ $viewData["movie"]->getGenre() }}</p>
-                <p class="card-text"><b>Plot:</b> {{ $viewData["movie"]->getPlot() }}</p>
-                <p class="card-text"><b>Rating:</b> {{ $viewData["movie"]->getRating() }}</p>
-                <p class="card-text"><b>Available stock:</b> {{ $viewData["movie"]->getStock() }}</p>
+                <p class="card-text"><b>@lang("app.movie_view.plot")</b> {{ $viewData["movie"]->getPlot() }}</p>
+                <p class="card-text"><b>@lang("app.movie_view.rating")</b> {{ $viewData["movie"]->getRating() }}</p>
+                <p class="card-text"><b>@lang("app.movie_view.stock")</b> {{ $viewData["movie"]->getStock() }}</p>
                 @auth
                     <p class="card-text">
                         <form method="POST" action="{{ route('cart.add', ['id'=> $viewData['movie']->getId()]) }}">
@@ -23,12 +23,12 @@
                                 @csrf
                                 <div class="col-auto">
                                     <div class="input-group col-auto">
-                                        <div class="input-group-text">Quantity</div>
+                                        <div class="input-group-text">@lang("app.movie_view.quantity")</div>
                                         <input type="number" min="1" max="10" class="form-control quantity-input" name="quantity" value="1">
                                     </div>
                                 </div>
                                 <div class="col-auto">
-                                    <button class="mt-auto btn btn-primary-outline" type="submit">Add to cart</button>
+                                    <button class="mt-auto btn btn-primary-outline" type="submit">@lang("app.movie_view.add")</button>
                                 </div>
                             </div>
                         </form>
@@ -36,21 +36,21 @@
                             <div class="col mt-4">
                                 <form class="py-2 px-4" action="{{route('review.store')}}" style="box-shadow: 0 0 10px 0 #ddd;" method="POST" autocomplete="off">
                                     @csrf
-                                    <p class="font-weight-bold ">Add a review about this movie</p>
+                                    <p class="font-weight-bold ">@lang("app.movie_view.review")</p>
                                     <div class="form-group row">
                                         <input type="hidden" name="movie_id" value="{{ $viewData['movie']->getId() }}">
                                         <div class="col">
                                             <div class="rate">
                                                 <input type="radio" id="star5" class="rate" name="rating" value="5"/>
-                                                <label for="star5" title="text">5 stars</label>
+                                                <label for="star5" title="text">@lang("app.movie_view.5")</label>
                                                 <input type="radio" checked id="star4" class="rate" name="rating" value="4"/>
-                                                <label for="star4" title="text">4 stars</label>
+                                                <label for="star4" title="text">@lang("app.movie_view.4")</label>
                                                 <input type="radio" id="star3" class="rate" name="rating" value="3"/>
-                                                <label for="star3" title="text">3 stars</label>
+                                                <label for="star3" title="text">@lang("app.movie_view.3")</label>
                                                 <input type="radio" id="star2" class="rate" name="rating" value="2">
-                                                <label for="star2" title="text">2 stars</label>
+                                                <label for="star2" title="text">@lang("app.movie_view.2")</label>
                                                 <input type="radio" id="star1" class="rate" name="rating" value="1"/>
-                                                <label for="star1" title="text">1 star</label>
+                                                <label for="star1" title="text">@lang("app.movie_view.1")</label>
                                             </div>
                                         </div>
                                     </div>
@@ -60,7 +60,7 @@
                                         </div>
                                     </div>
                                     <div class="mt-3 text-right">
-                                        <button type="submit" class="btn btn-primary-outline">Submit</button>
+                                        <button type="submit" class="btn btn-primary-outline">@lang("app.movie_view.submit")</button>
                                     </div>
                                 </form>
                             </div>
@@ -82,7 +82,7 @@
 </div>
 <div class="card mt-4">
     <div class="card-body">
-        <h5 class="card-title">Reviews</h5>
+        <h5 class="card-title">@lang("app.movie_view.reviews")</h5>
         @forelse ($viewData["movie"]->getReviews() as $review)
             <div class="review mb-3">
                 <div>
@@ -94,7 +94,7 @@
                 <p>{{ $review->getComment() }}</p>
             </div>
         @empty
-            <p>No reviews yet.</p>
+            <p>@lang("app.movie_view.noreviews")</p>
         @endforelse
     </div>
 </div>
