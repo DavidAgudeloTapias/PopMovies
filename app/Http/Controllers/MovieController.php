@@ -11,8 +11,8 @@ class MovieController extends Controller
     public function index(Request $request) : View
     {
         $viewData = [];
-        $viewData["title"] = "Movies - PopMovies";
-        $viewData["subtitle"] = "Available movies";
+        $viewData["title"] = trans("app.movie_controller.title");
+        $viewData["subtitle"] = trans("app.movie_controller.subtitle");
 
         $searchTerm = $request->input('search');
         $rating = $request->input('rating');
@@ -33,7 +33,7 @@ class MovieController extends Controller
         $viewData = [];
         $movie = Movie::findOrFail($id);
         $viewData["title"] = $movie->getTitle()." - PopMovies";
-        $viewData["subtitle"] = $movie->getTitle()." - Movie information";
+        $viewData["subtitle"] = $movie->getTitle()." - ".trans("app.movie_controller.info");
         $viewData["movie"] = $movie;
         return view('movie.show')->with("viewData", $viewData);
     }

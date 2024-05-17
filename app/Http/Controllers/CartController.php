@@ -48,7 +48,7 @@ class CartController extends Controller
         $viewData["subtitle"] = $movie->getTitle()." - ".trans("app.cart_controller.information");
         $viewData["movie"] = $movie;
 
-        session()->flash('success', trans("app.cart_controller.information"));
+        session()->flash('success', trans("app.cart_controller.added"));
 
         return view('movie.show')->with("viewData", $viewData);
     }

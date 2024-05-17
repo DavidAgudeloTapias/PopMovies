@@ -14,6 +14,24 @@ return [
         "purchasetitle" => "Compra - PopMovies",
         "purchasestatus" => "Estado de la Compra",
         "balance" => "Balance insuficiente para completar la compra.",
+    ],
+    "movie_controller" => [
+        "title" => "Películas - PopMovies",
+        "subtitle" => "Películas disponibles",
+        "info" => "Información de la película"
+    ],
+    "account_controller" => [
+        "title" => "Mis Ordenes - PopMovies",
+        "subtitle" => "Mis Ordenes",
+    ],
+    "news_controller" => [
+        "title" => "Noticias - PopMovies",
+        "subtitle" => "Lista de Noticias",
+        "info" => "Información de Noticias"
+    ],
+    "app_layout" => [
+        "es" => "Español",
+        "en" => "Inglés",
     ]
 ];
 

@@ -15,5 +15,23 @@ return [
         "purchasestatus" => "Purchase Status",
         "balance" => "Insufficient balance to complete the purchase.",
     ],
+    "movie_controller" => [
+        "title" => "Movies - PopMovies",
+        "subtitle" => "Available movies",
+        "info" => "Movie information"
+    ],
+    "account_controller" => [
+        "title" => "My Orders - PopMovies",
+        "subtitle" => "My Orders",
+    ],
+    "news_controller" => [
+        "title" => "News - PopMovies",
+        "subtitle" => "List of News",
+        "info" => "News information"
+    ],
+    "app_layout" => [
+        "es" => "Spanish",
+        "en" => "English",
+    ]
 ];
 

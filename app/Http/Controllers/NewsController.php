@@ -11,8 +11,8 @@ class NewsController extends Controller
     public function index(Request $request) : View
     {
         $viewData = [];
-        $viewData['title'] = 'News - PopMovies';
-        $viewData['subtitle'] = 'List of News';
+        $viewData['title'] = trans("app.news_controller.title");
+        $viewData['subtitle'] = trans("app.news_controller.subtitle");
         
         $orderDate = $request->input('order');
         $orderTitle = $request->input('alphabetical');
@@ -33,7 +33,7 @@ class NewsController extends Controller
         $viewData = [];
         $news = News::findOrFail($id);
         $viewData['title'] = $news['title'];
-        $viewData['subtitle'] = 'News information';
+        $viewData['subtitle'] = trans("app.news_controller.info");
         $viewData['news'] = $news;
 
         return view('news.show')->with('viewData', $viewData);
