@@ -7,6 +7,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Basic&family=League+Spartan:wght@100..900&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.4.0/font/bootstrap-icons.min.css">
     <link rel="icon" href="{{ asset('/img/Icon_PopMovies_2.png') }}" type="image/x-icon">
     <link href="{{ asset('/css/app.css') }}" rel="stylesheet"/>
     <link href="{{ asset('/css/reviews.css') }}" rel="stylesheet"/>
@@ -40,6 +41,13 @@
                             </svg>
                         </a>
                     @endauth
+                    <li class="nav-item dropdown">
+                        <div class="nav-link dropdown-toggle" role="button" id="navbarDropdown" data-bs-toggle="dropdown" aria-expanded="false"> <i class="bi bi-globe"></i> </div>
+                        <ul class="dropdown-menu dropdown-menu-end bg-secondary" aria-labelledby="navbarDropdown">
+                            <li class="dropdown-item"> <a class="nav-link" href="{{ route('lang.setLang', ['lange' => 'en']) }}">Inglés <i> <img src="{{ url('/img/ingles.jpg') }}" alt="USA flag" width="20px" height="15px"></i></a> </li>
+                            <li class="dropdown-item"> <a class="nav-link" href="{{ route('lang.setLang', ['lange' => 'es']) }}">Español <i> <img src="{{ url('/img/espanol.jpg') }}" alt="Spain flag" width="20px" height="15px"></i></a> </li>
+                        </ul>
+                    </li>
                     <div class="vr bg-white mx-2 d-none d-lg-block"></div> 
                     @guest 
                         <a class="nav-link active btn-banner" href="{{ route('login') }}">
