@@ -103,6 +103,14 @@
         @yield('content') 
     </div>
 
+    <!-- Advice -->
+    <section class="advice-section">
+        <div class="container">
+            <h2> @lang('app.app_layout.advice') </h2>
+            <p>{{ $viewData['advice'] }}</p>
+        </div>
+    </section>
+
     <!-- footer --> 
     <footer class="mt-auto">
         <div class="copyright py-4 text-center text-white"> 

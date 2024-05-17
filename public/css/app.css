@@ -53,6 +53,27 @@ nav{
     }
 }
 
+.advice-section {
+    background-color: #f9f9f9;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 5px;
+}
+
+.advice-section .container {
+    text-align: center;
+}
+
+.advice-section h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.advice-section p {
+    font-size: 1.2em;
+    color: #333;
+}
+
 
 
 
