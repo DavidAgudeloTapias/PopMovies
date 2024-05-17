@@ -17,7 +17,7 @@
                 
                 <!-- Preview Image -->
                 <figure class="mb-4">
-                    <img class="img-fluid rounded" src="{{ asset('/storage/'.$viewData["news"]->getImage()) }}" alt="{{ $viewData["news"]->getTitle() }}" />
+                    <img class="img-fluid rounded" src="{{ url("{$viewData["news"]->getImage()}") }}" alt="{{ $viewData["news"]->getTitle() }}" />
                 </figure>
                 
                 <!-- News Content -->

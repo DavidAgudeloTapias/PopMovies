@@ -38,7 +38,7 @@
         @foreach ($viewData["news"] as $news)
             <div class="col-md-6 col-lg-4 mb-4 d-flex align-items-stretch">
                 <div class="card shadow-sm">
-                    <img src="{{ asset('/storage/'.$news->getImage()) }}" class="card-img-top img-fluid" alt="{{ $news->getTitle() }}">
+                    <img src="{{ url("{$news->getImage()}") }}" class="card-img-top img-fluid" alt="{{ $news->getTitle() }}">
                     <div class="card-body d-flex flex-column">
                         <h5 class="card-title">{{ $news->getTitle() }}</h5>
                         <p class="card-text text-truncate">{{ $news->getContent() }}</p>

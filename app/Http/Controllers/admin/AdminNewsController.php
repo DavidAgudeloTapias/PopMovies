@@ -28,18 +28,18 @@ class AdminNewsController extends Controller
         $newNews->setImage("game.png");
         $newNews->save();
 
-        if ($request->hasFile('image')) {
+        if ($request->hasFile('image'))
+        {
             $imageName = $newNews->getId().".".$request->file('image')->extension();
-            Storage::disk('public')->put(
-                $imageName,
-                file_get_contents($request->file('image')->getRealPath())
-            );
-            $newNews->setImage($imageName);
+            $imagePath = 'img/news/'.$imageName;
+            $request->file('image')->move(public_path('img/news'), $imageName);
+
+            $newNews->setImage($imagePath);
             $newNews->save();
         }
 
-        return back();
-    }
+    return back();
+}
 
     public function delete(int $id) : RedirectResponse
     {
@@ -62,14 +62,13 @@ class AdminNewsController extends Controller
         $news->setContent($request->input('content'));
         $news->setSource($request->input('source'));
 
-        if ($request->hasFile('image')) {
+        if ($request->hasFile('image'))
+        {
             $imageName = $news->getId().".".$request->file('image')->extension();
-            Storage::disk('public')->put(
-                $imageName,
-                file_get_contents($request->file('image')->getRealPath())
-            );
-            $news->setImage($imageName);
-            $news->save();
+            $imagePath = 'img/news/'.$imageName;
+            $request->file('image')->move(public_path('img/news'), $imageName);
+
+            $news->setImage($imagePath);
         }
 
         $news->save();

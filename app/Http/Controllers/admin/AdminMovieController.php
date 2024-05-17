@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Models\Movie;
+use App\Util\ImageLocalStorage;
 use App\Http\Controllers\Controller;
 use Illuminate\View\View;
 use Illuminate\Http\Request;
@@ -22,24 +23,22 @@ class AdminMovieController extends Controller
     public function store(Request $request) : RedirectResponse
     {
         $newMovie = new Movie();
-        $newMovie->setTitle($request->input('title'));
-        $newMovie->setDirector($request->input('director'));
-        $newMovie->setGenre($request->input('genre'));
-        $newMovie->setPrice($request->input('price'));
-        $newMovie->setStock($request->input('stock'));
-        $newMovie->setPlot($request->input('plot'));
-        $newMovie->setPoster("game.png");
-        $newMovie->save();
 
-        if ($request->hasFile('poster')) {
-            $imageName = $newMovie->getId().".".$request->file('poster')->extension();
-            Storage::disk('public')->put(
-                $imageName,
-                file_get_contents($request->file('poster')->getRealPath())
-            );
-            $newMovie->setPoster($imageName);
-            $newMovie->save();
-        }
+    $newMovie->setTitle($request->input('title'));
+    $newMovie->setDirector($request->input('director'));
+    $newMovie->setGenre($request->input('genre'));
+    $newMovie->setPrice($request->input('price'));
+    $newMovie->setStock($request->input('stock'));
+    $newMovie->setPlot($request->input('plot'));
+    $newMovie->setPoster("game.png");
+    $newMovie->save();
+
+    $movieId = $newMovie->getId();
+    $imagePath = new ImageLocalStorage();
+    $imagePath = $imagePath->storeAndGetPath($request, 'movies', $movieId);
+
+    $newMovie->setPoster($imagePath);
+    $newMovie->save();
 
         return back();
     }
@@ -70,12 +69,10 @@ class AdminMovieController extends Controller
 
         if ($request->hasFile('poster')) {
             $imageName = $movie->getId().".".$request->file('poster')->extension();
-            Storage::disk('public')->put(
-                $imageName,
-                file_get_contents($request->file('poster')->getRealPath())
-            );
-            $movie->setPoster($imageName);
-            $movie->save();
+            $imagePath = 'img/movies/'.$imageName;
+            $request->file('poster')->move(public_path('img/movies'), $imageName);
+
+            $movie->setPoster($imagePath);
         }
 
         $movie->save();

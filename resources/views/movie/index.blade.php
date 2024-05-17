@@ -31,7 +31,7 @@
     @foreach ($viewData["movies"] as $movie) 
         <div class="col-md-4 col-lg-3 mb-2"> 
             <div class="card"> 
-                <img src="{{ asset('/storage/'.$movie->getPoster()) }}" class="card-img-top movie-img-card"> 
+                <img src="{{ url("{$movie->getPoster()}") }}" class="card-img-top movie-img-card"> 
                 <div class="card-body text-center"> 
                     <a href="{{ route('movie.show', ['id'=> $movie->getId()]) }}" class="mt-auto btn btn-primary-outline"> {{ $movie->getTitle() }} </a> 
                 </div> 
