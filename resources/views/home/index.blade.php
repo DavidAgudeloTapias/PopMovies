@@ -13,4 +13,11 @@
         </div>
     </div>
 </div>
+<!-- Advice -->
+<section class="advice-section">
+    <div class="container">
+        <h2> @lang('app.app_layout.advice') </h2>
+        <p>{{ $viewData['advice'] }}</p>
+    </div>
+</section>
 @endsection
