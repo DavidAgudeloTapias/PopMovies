@@ -32,6 +32,16 @@ return [
     "app_layout" => [
         "es" => "Spanish",
         "en" => "English",
+        "home" => "Home",
+        "movies" => "Movies",
+        "news" => "News",
+        "login" => "Login",
+        "register" => "Register",
+        "cart" => "Cart",
+        "orders" => "My Orders",
+        "logout" => "Logout",
+        "subtitle" => "Welcome to PopMovies",
+
     ]
 ];
 
