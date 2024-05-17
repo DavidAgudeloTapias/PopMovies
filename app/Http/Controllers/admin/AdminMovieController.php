@@ -14,7 +14,7 @@ class AdminMovieController extends Controller
     public function index() : View
     {
         $viewData = [];
-        $viewData["title"] = "Admin Page - Movies - PopMovies";
+        $viewData["title"] = trans("admin.movie_controller.index_title");
         $viewData["movies"] = Movie::all();
         return view('admin.movie.index')->with("viewData", $viewData);
     }
@@ -53,7 +53,7 @@ class AdminMovieController extends Controller
     public function edit(int $id) : View
     {
         $viewData = [];
-        $viewData["title"] = "Admin Page - Edit Movie - PopMovies";
+        $viewData["title"] = trans("admin.movie_controller.edit_title");
         $viewData["movie"] = Movie::findOrFail($id);
         return view('admin.movie.edit')->with("viewData", $viewData);
     }
