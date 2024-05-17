@@ -14,5 +14,16 @@ return [
     ],
     "admin_layout" => [
         "span" => "Panel de administrador",
+        "home" => "Administador - Inicio",
+        "movies" => "Administador - Películas",
+        "news" => "Administador - Noticias",
+        "es" => "Español",
+        "en" => "Inglés",
+        "admin" => "Administador",
+        "logout" => "Cerrar Sesión",
+    ],
+    "admin_index" => [
+        "title" => "Panel de Administrador - Página de Inicio",
+        "text" => "Bienvenido al Panel de administración, use la barra lateral para navegar entre las diferentes opciones."
     ]
 ];

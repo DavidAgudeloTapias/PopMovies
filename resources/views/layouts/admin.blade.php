@@ -19,24 +19,24 @@
             <hr /> <!-- Linea divisora -->
             <ul class="nav flex-column">
                 <li>
-                    <a href="{{ route('admin.home.index') }}" class="nav-link text-white"> Admin - Home </a>
+                    <a href="{{ route('admin.home.index') }}" class="nav-link text-white"> @lang("admin.admin_layout.home") </a>
                 </li>
                 <li>
-                    <a href="{{ route('admin.movie.index') }}" class="nav-link text-white"> Admin - Movies </a>
+                    <a href="{{ route('admin.movie.index') }}" class="nav-link text-white"> @lang("admin.admin_layout.movies") </a>
                 </li>
                 <li>
-                    <a href="{{ route('admin.news.index') }}" class="nav-link text-white"> Admin - News </a>
+                    <a href="{{ route('admin.news.index') }}" class="nav-link text-white"> @lang("admin.admin_layout.news") </a>
                 </li>
                 <li class="nav-item dropdown">
                     <div class="nav-link dropdown-toggle" role="button" id="navbarDropdown" data-bs-toggle="dropdown" aria-expanded="false"> <i class="bi bi-globe"></i> </div>
                     <ul class="dropdown-menu dropdown-menu-end bg-secondary" aria-labelledby="navbarDropdown">
-                        <li class="dropdown-item"> <a class="nav-link" href="{{ route('lang.setLang', ['lange' => 'en']) }}">Inglés <i> <img src="{{ url('/img/ingles.jpg') }}" alt="USA flag" width="20px" height="15px"></i></a> </li>
-                        <li class="dropdown-item"> <a class="nav-link" href="{{ route('lang.setLang', ['lange' => 'es']) }}">Español <i> <img src="{{ url('/img/espanol.jpg') }}" alt="Spain flag" width="20px" height="15px"></i></a> </li>
+                        <li class="dropdown-item"> <a class="nav-link" href="{{ route('lang.setLang', ['lange' => 'en']) }}"> @lang("admin.admin_layout.en") </i> <img src="{{ url('/img/ingles.jpg') }}" alt="USA flag" width="20px" height="15px"></i></a> </li>
+                        <li class="dropdown-item"> <a class="nav-link" href="{{ route('lang.setLang', ['lange' => 'es']) }}"> @lang("admin.admin_layout.es") <i> <img src="{{ url('/img/espanol.jpg') }}" alt="Spain flag" width="20px" height="15px"></i></a> </li>
                     </ul>
                 </li>
                 <li>
                     <form id="logout" action="{{ route('logout') }}" method="POST"> 
-                        <a role="button" class="mt-2 btn bg-primary text-white" onclick="document.getElementById('logout').submit();">Logout</a> 
+                        <a role="button" class="mt-2 btn bg-primary text-white" onclick="document.getElementById('logout').submit();">@lang("admin.admin_layout.logout")</a> 
                     @csrf 
                     </form> 
                 </li>
@@ -45,7 +45,7 @@
         <!-- sidebar -->
         <div class="col content-grey">
             <nav class="p-3 shadow text-end">
-                <span class="profile-font">Admin</span>
+                <span class="profile-font">@lang("admin.admin_layout.admin")</span>
                 <img class="img-profile rounded-circle" src="{{ asset('/img/undraw_profile.svg') }}">
             </nav>
             <div class="g-0 m-5">
