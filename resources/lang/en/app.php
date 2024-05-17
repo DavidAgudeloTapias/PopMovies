@@ -84,9 +84,12 @@ return [
         "no_reviews" => "No reviews yet.",
     ],
     "orders_view" => [
+        "order" => "Order #",
+        "date" => "Date:",
+        "total" => "Total:",
         "item" => "Item ID",
         "name" => "Product Name",
-        "price" => "price by unit",
+        "price" => "Price by Unit",
         "quantity" => "Quantity",
         "message" => "Seems to be that you have not purchased anything in our store =(.",
     ],

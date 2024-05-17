@@ -44,7 +44,7 @@ return [
     ],
     "cart_view" => [
         "view_title" => "Productos en el Carrito",
-        "id" => "Identificación",
+        "id" => "ID",
         "name" => "Nombre",
         "price" => "Precio",
         "quantity" => "Cantidad",
@@ -84,9 +84,12 @@ return [
         "no_reviews" => "No hay reseñas todavía.",
     ],
     "orders_view" => [
+        "order" => "Orden #",
+        "date" => "Fecha:",
+        "total" => "Total:",
         "item" => "ID del Ítem",
         "name" => "Nombre del Producto",
-        "price" => "precio por unidad",
+        "price" => "Precio por Unidad",
         "quantity" => "Cantidad",
         "message" => "Parece ser que no has comprado nada en nuestra tienda =(.",
     ],

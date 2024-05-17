@@ -5,11 +5,11 @@
     @forelse ($viewData["orders"] as $order) 
         <div class="card mb-4">
             <div class="card-header">
-                Order #{{ $order->getId() }}
+                @lang("app.orders_view.order"){{ $order->getId() }}
             </div>
             <div class="card-body">
-                <b>Date:</b> {{ $order->getCreatedAt() }} <br />
-                <b>Total:</b> ${{ $order->getTotal() }} <br />
+                <b>@lang("app.orders_view.date")</b> {{ $order->getCreatedAt() }} <br />
+                <b>@lang("app.orders_view.total")</b> ${{ $order->getTotal() }} <br />
                 <table class="table table-bordered table-striped text-center mt-3">
                     <thead>
                         <tr>
