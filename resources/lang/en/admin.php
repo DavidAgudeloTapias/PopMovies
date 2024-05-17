@@ -25,5 +25,32 @@ return [
     "admin_index" => [
         "title" => "Admin Panel - Home Page",
         "text" => "Welcome to the Admin Panel, use the sidebar to navigate between the different options.",
-    ]
+    ],
+    "admin_index_movies" => [
+        "view_title" => "Create Movie",
+        "title" => "Title:",
+        "director" => "Director:",
+        "price" => "Price:",
+        "stock" => "Stock:",
+        "poster" => "Poster:",
+        "genre" => "Genre:",
+        "plot" => "Plot:",
+        "submit" => "Submit",
+        "manage_movies" => "Manage Movies",
+        "id" => "ID",
+        "edit_title" => "Title",
+        "edit" => "Edit",
+        "delete" => "Delete",
+    ],
+    "admin_edit_movies" => [
+        "view_title" => "Edit Movie",
+        "title" => "Title:",
+        "director" => "Director:",
+        "price" => "Price:",
+        "stock" => "Stock:",
+        "poster" => "Poster:",
+        "genre" => "Genre:",
+        "plot" => "Plot:",
+        "edit" => "Edit",
+    ],
 ];
