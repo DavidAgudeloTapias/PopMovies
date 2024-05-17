@@ -14,7 +14,7 @@ class AdminNewsController extends Controller
     public function index() : View
     {
         $viewData = [];
-        $viewData["title"] = "Admin Page - News - PopMovies";
+        $viewData["title"] = trans("admin.news_controller.index_title");
         $viewData["news"] = News::all();
         return view('admin.news.index')->with("viewData", $viewData);
     }
@@ -50,7 +50,7 @@ class AdminNewsController extends Controller
     public function edit(int $id) : View
     {
         $viewData = [];
-        $viewData["title"] = "Admin Page - Edit News - PopMovies";
+        $viewData["title"] = trans("admin.news_controller.edit_title");
         $viewData["news"] = News::findOrFail($id);
         return view('admin.news.edit')->with("viewData", $viewData);
     }
