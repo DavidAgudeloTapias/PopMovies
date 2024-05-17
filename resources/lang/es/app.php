@@ -41,6 +41,7 @@ return [
         "orders" => "Mis Ordenes",
         "logout" => "Cerrar Sesión",
         "subtitle" => "Bienvenido a PopMovies",
+        "advice" => "Consejo del Día",
     ],
     "cart_view" => [
         "view_title" => "Productos en el Carrito",

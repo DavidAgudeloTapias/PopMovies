@@ -41,6 +41,7 @@ return [
         "orders" => "My Orders",
         "logout" => "Logout",
         "subtitle" => "Welcome to PopMovies",
+        "advice" => "Daily Advice",
     ],
     "cart_view" => [
         "view_title" => "Products in Cart",
