@@ -24,8 +24,8 @@ class CartController extends Controller
         }
 
         $viewData = [];
-        $viewData["title"] = "Cart - PopMovies";
-        $viewData["subtitle"] = "Shopping Cart";
+        $viewData["title"] = trans("app.cart_controller.title");
+        $viewData["subtitle"] = trans("app.cart_controller.subtitle");
         $viewData["total"] = $total;
         $viewData["movies"] = $moviesInCart;
         return view('cart.index')->with("viewData", $viewData);
@@ -36,7 +36,7 @@ class CartController extends Controller
         $movie = Movie::findOrFail($id);
         $quantityToAdd = $request->input('quantity');
         if ($quantityToAdd > $movie->getStock()) {
-            return redirect()->route('movie.show', $id)->with('error', 'Insufficient stock to add to cart.');
+            return redirect()->route('movie.show', $id)->with('error', trans("app.cart_controller.stock"));
         }
 
         $movies = $request->session()->get("movies");
@@ -44,11 +44,11 @@ class CartController extends Controller
         $request->session()->put('movies', $movies);
 
         $viewData = [];
-        $viewData["title"] = $movie->getTitle()." - Movies available";
-        $viewData["subtitle"] = $movie->getTitle()." - Movie information";
+        $viewData["title"] = $movie->getTitle()." - ".trans("app.cart_controller.available");
+        $viewData["subtitle"] = $movie->getTitle()." - ".trans("app.cart_controller.information");
         $viewData["movie"] = $movie;
 
-        session()->flash('success', 'The movie has been added to cart.');
+        session()->flash('success', trans("app.cart_controller.information"));
 
         return view('movie.show')->with("viewData", $viewData);
     }
@@ -97,13 +97,13 @@ class CartController extends Controller
                 $request->session()->forget('movies');
 
                 $viewData = [];
-                $viewData["title"] = "Purchase - PopMovies";
-                $viewData["subtitle"] = "Purchase Status";
+                $viewData["title"] = trans("app.cart_controller.purchasetitle");
+                $viewData["subtitle"] = trans("app.cart_controller.purchasestatus");
                 $viewData["order"] = $order;
 
                 return view('cart.purchase')->with("viewData", $viewData);
             } else {
-                return redirect()->route('cart.index')->with('error', 'Insufficient balance to complete the purchase.');
+                return redirect()->route('cart.index')->with('error', trans("app.cart_controller.balance"));
             }
         } else {
             return redirect()->route('cart.index');
