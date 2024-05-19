@@ -186,3 +186,27 @@ nav{
 .no-pointer {
     cursor: default;
 }
+
+
+
+
+
+.plants-container .card {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.1);
+}
+
+.plants-container .card-body {
+    padding: 15px;
+}
+
+.plants-container .card-title {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.plants-container .card-text {
+    font-size: 1em;
+    color: #555;
+}

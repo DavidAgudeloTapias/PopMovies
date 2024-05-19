@@ -33,6 +33,7 @@ return [
         "es" => "Spanish",
         "en" => "English",
         "home" => "Home",
+        "plants" => "Plants Shop",
         "movies" => "Movies",
         "news" => "News",
         "login" => "Login",
@@ -102,5 +103,10 @@ return [
         "order" => "Order alphabetically",
         "read" => "Read More",
         "posted" => "Posted on ",
+    ],
+    "plants_view" => [
+        "plants" => "Available plants",
+        "price" => "Price: $",
+        "stock" => "Stock:",
     ],
 ];

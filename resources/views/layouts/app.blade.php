@@ -24,7 +24,7 @@
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav ms-auto">
                     <a class="nav-link active btn-banner" href="{{ route('home.index') }}">@lang("app.app_layout.home")</a>
-                    <a class="nav-link active btn-banner" href="{{ route('movie.index') }}">
+                        <a class="nav-link active btn-banner" href="{{ route('movie.index') }}">
                         @lang("app.app_layout.movies")
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-camera-reels" viewBox="0 0 16 16">
                             <path d="M6 3a3 3 0 1 1-6 0 3 3 0 0 1 6 0M1 3a2 2 0 1 0 4 0 2 2 0 0 0-4 0"/>
@@ -40,6 +40,7 @@
                                 <path d="M2 3h10v2H2zm0 3h4v3H2zm0 4h4v1H2zm0 2h4v1H2zm5-6h2v1H7zm3 0h2v1h-2zM7 8h2v1H7zm3 0h2v1h-2zm-3 2h2v1H7zm3 0h2v1h-2zm-3 2h2v1H7zm3 0h2v1h-2z"/>
                             </svg>
                         </a>
+                        <a class="nav-link active btn-banner" href="{{ route('plant.index') }}">@lang("app.app_layout.plants") <i class="bi bi-flower1"></i> </a>
                     @endauth
                     <li class="nav-item dropdown">
                         <div class="nav-link dropdown-toggle" role="button" id="navbarDropdown" data-bs-toggle="dropdown" aria-expanded="false"> <i class="bi bi-globe"></i> </div>

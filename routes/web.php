@@ -20,6 +20,8 @@ Route::get('/movies', 'App\Http\Controllers\MovieController@index')->name("movie
 Route::get('/movies/{id}', 'App\Http\Controllers\MovieController@show')->name("movie.show");
 Route::get('/locale/{lange}', 'App\Http\Controllers\LangController@setLang')->name("lang.setLang");
 
+Route::get('/plants', 'App\Http\Controllers\PlantController@index')->name("plant.index");
+
 Route::middleware('client')->group(function () {
     Route::post('/movies/reviews', 'App\Http\Controllers\ReviewController@store')->name("review.store");
 
