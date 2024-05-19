@@ -9,7 +9,7 @@ class PlantController extends Controller
 {
     public function index() : View
     {
-        $plantsResponse = Http::get('http://34.134.181.54/public/api/plants');
+        $plantsResponse = Http::get('http://34.134.181.54/api/plants');
         
         if ($plantsResponse->successful()) {
             $plants = $plantsResponse->json();
