@@ -93,7 +93,13 @@ return [
         "name" => "Nombre del Producto",
         "price" => "Precio por Unidad",
         "quantity" => "Cantidad",
+        "pdf" => "Descargar PDF",
+        "excel" => "Descargar Excel",
         "message" => "Parece ser que no has comprado nada en nuestra tienda =(.",
+    ],
+    "pdf" => [
+        "report_1" => "Reporte de la orden - PDF",
+        "report_2" => "Reporte de la orden",
     ],
     "news_view" => [
         "filter" => "Filtros",
