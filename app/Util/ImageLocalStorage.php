@@ -1,7 +1,6 @@
 <?php
 
 namespace App\Util;
-use App\Models\Movie;
 
 use Illuminate\Http\Request;
 

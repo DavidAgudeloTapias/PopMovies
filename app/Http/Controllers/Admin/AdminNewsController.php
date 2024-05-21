@@ -7,7 +7,6 @@ use App\Http\Controllers\Controller;
 use Illuminate\View\View;
 use Illuminate\Http\Request;
 use Illuminate\Http\RedirectResponse;
-use Illuminate\Support\Facades\Storage;
 
 class AdminNewsController extends Controller
 {
@@ -28,8 +27,7 @@ class AdminNewsController extends Controller
         $newNews->setImage("game.png");
         $newNews->save();
 
-        if ($request->hasFile('image'))
-        {
+        if ($request->hasFile('image')) {
             $imageName = $newNews->getId().".".$request->file('image')->extension();
             $imagePath = 'img/news/'.$imageName;
             $request->file('image')->move(public_path('img/news'), $imageName);
@@ -38,8 +36,8 @@ class AdminNewsController extends Controller
             $newNews->save();
         }
 
-    return back();
-}
+        return back();
+    }
 
     public function delete(int $id) : RedirectResponse
     {
@@ -62,8 +60,7 @@ class AdminNewsController extends Controller
         $news->setContent($request->input('content'));
         $news->setSource($request->input('source'));
 
-        if ($request->hasFile('image'))
-        {
+        if ($request->hasFile('image')) {
             $imageName = $news->getId().".".$request->file('image')->extension();
             $imagePath = 'img/news/'.$imageName;
             $request->file('image')->move(public_path('img/news'), $imageName);

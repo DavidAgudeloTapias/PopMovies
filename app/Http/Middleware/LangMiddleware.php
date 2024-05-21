@@ -12,9 +12,9 @@ class LangMiddleware
 {
     public function handle(Request $request, Closure $next): Response
     {
-        if(Session::get("locale") != null){
+        if (Session::get("locale") != null) {
             App::setLocale(Session::get("locale"));
-        }else{
+        } else {
             Session::put("locale", "en");
             App::setLocale(Session::get("locale"));
         }

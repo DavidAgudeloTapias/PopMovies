@@ -23,21 +23,21 @@ class AdminMovieController extends Controller
     {
         $newMovie = new Movie();
 
-    $newMovie->setTitle($request->input('title'));
-    $newMovie->setDirector($request->input('director'));
-    $newMovie->setGenre($request->input('genre'));
-    $newMovie->setPrice($request->input('price'));
-    $newMovie->setStock($request->input('stock'));
-    $newMovie->setPlot($request->input('plot'));
-    $newMovie->setPoster("game.png");
-    $newMovie->save();
+        $newMovie->setTitle($request->input('title'));
+        $newMovie->setDirector($request->input('director'));
+        $newMovie->setGenre($request->input('genre'));
+        $newMovie->setPrice($request->input('price'));
+        $newMovie->setStock($request->input('stock'));
+        $newMovie->setPlot($request->input('plot'));
+        $newMovie->setPoster("game.png");
+        $newMovie->save();
 
-    $movieId = $newMovie->getId();
-    $imagePath = new ImageLocalStorage();
-    $imagePath = $imagePath->storeAndGetPath($request, 'movies', $movieId);
+        $movieId = $newMovie->getId();
+        $imagePath = new ImageLocalStorage();
+        $imagePath = $imagePath->storeAndGetPath($request, 'movies', $movieId);
 
-    $newMovie->setPoster($imagePath);
-    $newMovie->save();
+        $newMovie->setPoster($imagePath);
+        $newMovie->save();
 
         return back();
     }

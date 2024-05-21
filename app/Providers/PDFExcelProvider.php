@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 namespace App\Providers;
 
@@ -11,11 +11,11 @@ class PDFExcelProvider extends ServiceProvider
 {
     public function register(): void
     {
-        $this->app->bind(ReportGeneratorInterface::class, function() {
+        $this->app->bind(ReportGeneratorInterface::class, function () {
             return new PdfReportGenerator();
         });
 
-        $this->app->bind(ReportGeneratorInterface::class, function() {
+        $this->app->bind(ReportGeneratorInterface::class, function () {
             return new ExcelReportGenerator();
         });
     }

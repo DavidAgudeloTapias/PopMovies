@@ -21,7 +21,7 @@ class MovieController extends Controller
             $viewData["movies"] = Movie::where('title', 'LIKE', '%' . $searchTerm . '%')->get();
         } elseif ($rating) {
             $viewData["movies"] = Movie::where('rating', '>=', $rating)->get();
-        } else{
+        } else {
             $viewData["movies"] = Movie::all();
         }
 

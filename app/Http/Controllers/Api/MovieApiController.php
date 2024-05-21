@@ -21,4 +21,3 @@ class MovieApiController extends Controller
         return response()->json($movie, 200);
     }
 }
-
