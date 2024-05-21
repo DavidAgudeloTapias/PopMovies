@@ -32,6 +32,8 @@
                         @endforeach
                     </tbody>
                 </table>
+                <a href="{{ route('order.pdf', $order->getId()) }}" class="btn btn-primary-outline"> @lang("app.orders_view.pdf") </a>
+                <a href="{{ route('order.excel', $order->getId()) }}" class="btn btn-secondary"> @lang("app.orders_view.excel") </a>
             </div>
         </div>
         @empty 

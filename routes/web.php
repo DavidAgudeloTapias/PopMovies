@@ -34,6 +34,8 @@ Route::middleware('client')->group(function () {
     Route::get('/cart/purchase', 'App\Http\Controllers\CartController@purchase')->name("cart.purchase");
 
     Route::get('/my-account/orders', 'App\Http\Controllers\MyAccountController@orders')->name("myaccount.orders");
+    Route::get('/order/{orderId}/pdf', 'App\Http\Controllers\MyAccountController@generatePdfReport')->name('order.pdf');
+    Route::get('/order/{orderId}/excel', 'App\Http\Controllers\MyAccountController@generateExcelReport')->name('order.excel');
 });
 
 Route::middleware('admin')->group(function () {
