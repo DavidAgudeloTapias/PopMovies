@@ -37,11 +37,10 @@ RUN composer install \
 
 # Generar la clave de la aplicación
 RUN php artisan key:generate
-RUN php artisan db:seed
 
 # Ejecutar migraciones y seeders
-RUN php artisan migrate --force
-RUN php artisan db:seed --force
+RUN php artisan migrate
+RUN php artisan db:seed
 
 # Configurar permisos
 RUN chmod -R 777 storage
