@@ -10,15 +10,18 @@ PopMovies es un e-commerce innovador enfocado en la venta de películas físicas
 - Composer 2.7.1
 
 ## Configuración de la Base de Datos
-1. Crear una base de datos para el proyecto.
-2. Configurar las credenciales de la base de datos en el archivo `.env`.
-3. Ejecutar migraciones: `php artisan migrate`
+1. Crear una base de datos en el motor deseado (En nuestro caso usamos XAMPP)
+2. Crear el archivo .env a partir del archivo .env.example
+3. Configurar las credenciales de la base de datos en el archivo `.env`.
+4. Ejecutar la llave de la aplicación: `php artisan key:generate`.
+5. Ejecutar migraciones: `php artisan migrate`.
 
 ## Ejecución del Proyecto
 1. Clonar el repositorio: `git clone https://github.com/DavidAgudeloTapias/PopMovies.git`
 2. Ubicarse en la linea de comandos, sobre la carpeta donde se clonó el repositorio
-3. Ejecutar el comando `php artisan serve`
-4. En el navegador pegar  este link: `http://127.0.0.1:8000`
+3. Realizar la "Configuración de la Base de Datos" (Sección de arriba)
+4. Ejecutar el comando `php artisan serve`
+5. En el navegador pegar  este link: `http://127.0.0.1:8000`
 
 ## Rutas del usuario final
 - `/`: Página principal de la tienda con el listado de películas.
