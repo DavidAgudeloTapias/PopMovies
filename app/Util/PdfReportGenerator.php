@@ -8,13 +8,13 @@ use Dompdf\Options;
 
 class PdfReportGenerator implements ReportGeneratorInterface
 {
-    public function generate(array $data): string
+    public function downloadReport($order): string
     {
         $options = new Options();
         $options->set('defaultFont', 'Courier');
         $dompdf = new Dompdf($options);
 
-        $html = view('reports.pdf', compact('data'))->render();
+        $html = view('reports.pdf', ['orderData' => $order])->render(); // Pasa el objeto $order a la vista
 
         $dompdf->loadHtml($html);
         $dompdf->setPaper('A4', 'portrait');

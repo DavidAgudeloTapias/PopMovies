@@ -5,8 +5,8 @@
 </head>
 <body>
     <h1> @lang("app.pdf.report_2") </h1>
-    <p><b>@lang("app.orders_view.date")</b> {{ $data['created_at'] }} </p>
-    <p><b>@lang("app.orders_view.total")</b> ${{ $data['total'] }} </p>
+    <p><b>@lang("app.orders_view.date")</b> {{ $orderData->getCreatedAt() }} </p>
+    <p><b>@lang("app.orders_view.total")</b> ${{ $orderData->getTotal() }} </p>
     <table border="1" width="100%">
         <thead>
             <tr>
@@ -17,12 +17,14 @@
             </tr>
         </thead>
         <tbody>
-            @foreach ($data['items'] as $item)
+            @foreach ($orderData->getItems() as $item)
             <tr>
-                <td>{{ $item['id'] }}</td>
-                <td>{{ $item['movie']['title'] }}</td>
-                <td>${{ $item['price'] }}</td>
-                <td>{{ $item['quantity'] }}</td>
+                <td>{{ $item->getId() }}</td>
+                <td>
+                    <a value="{{ $item->getMovie()->getId() }}"> {{ $item->getMovie()->getTitle() }} </a>
+                </td>
+                <td>${{ $item->getPrice() }}</td>
+                <td>{{ $item->getQuantity() }}</td>
             </tr>
             @endforeach
         </tbody>
